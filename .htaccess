@@ -4,8 +4,7 @@ ProxyRequests off
 
     RewriteEngine On
     RewriteCond %{HTTP:Connection} Upgrade [NC]
-    RewriteCond %{HTTP:Upgrade} websocket [NC]
-    RewriteRule /(.*) ws://chat.bewedoc.ru:9090/$1 [P,L]
+    RewriteRule /(.*) ws://chat.bewedoc.ru:8080/$1 [P,L]
 
-    ProxyPass               /websocket http://chat.bewedoc.ru:9090/websocket
-    ProxyPassReverse        /websocket http://chat.bewedoc.ru:9090/websocket
+    ProxyPass                http://chat.bewedoc.ru:8080
+    ProxyPassReverse         http://chat.bewedoc.ru:8080
