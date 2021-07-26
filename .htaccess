@@ -1,0 +1,11 @@
+ProxyRequests off
+    ProxyVia on      
+    RewriteEngine On
+
+    RewriteEngine On
+    RewriteCond %{HTTP:Connection} Upgrade [NC]
+    RewriteCond %{HTTP:Upgrade} websocket [NC]
+    RewriteRule /(.*) ws://chat.bewedoc.ru:9090/$1 [P,L]
+
+    ProxyPass               /websocket http://chat.bewedoc.ru:9090/websocket
+    ProxyPassReverse        /websocket http://chat.bewedoc.ru:9090/websocket
