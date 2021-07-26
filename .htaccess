@@ -1,0 +1,5 @@
+RewriteEngine on
+ProxyRequests Off
+ProxyPreserveHost on
+ProxyPass ws://chat.bewedoc.ru:8080
+ProxyPassReverse ws://chat.bewedoc.ru:8080
