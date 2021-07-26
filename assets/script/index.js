@@ -1,4 +1,12 @@
-const socket = io();
+const socket = io('https://chat.bewedoc.ru/', {
+    reconnectionDelay: 1000,
+    reconnection: true,
+    reconnectionAttemps: 10,
+    transports: ['websocket'],
+    agent: false,
+    upgrade: false,
+    rejectUnauthorized: false
+});
 const message = document.querySelector('.message');
 const form = document.querySelector('form');
 
