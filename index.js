@@ -17,6 +17,6 @@ io.on('connection', socket => {
     })
 })
 app.use(express.static(path.resolve(__dirname, 'assets')))
-http.listen(5000, () => {
+http.listen(PORT, () => {
     console.log('Server Started PORT: ' + PORT);
 })
