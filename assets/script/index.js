@@ -1,4 +1,4 @@
-const socket = io('http://chat.bewedoc.ru/');
+const socket = io('https://chat.bewedoc.ru/');
 const message = document.querySelector('.message');
 const form = document.querySelector('form');
 
