@@ -1,4 +1,4 @@
-const socket = io('https://chat.bewedoc.ru/', {
+const socket = io('wss://chat.bewedoc.ru/', {
     reconnectionDelay: 1000,
     reconnection: true,
     reconnectionAttemps: 10,
