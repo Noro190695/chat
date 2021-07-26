@@ -3,7 +3,7 @@ if (window.location.protocol === 'https:') {
             protocol = 'wss://';
    }
 
- let wsUri =protocol+ "mysite.com/myws";  
+ let wsUri =protocol+ "chat.bewedoc.ru/myws";  
 const socket = io(wsUri);
 
   
