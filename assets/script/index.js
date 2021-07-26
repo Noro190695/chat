@@ -1,10 +1,5 @@
-let protocol = 'ws://'; 
-if (window.location.protocol === 'https:') {
-            protocol = 'wss://';
-   }
 
- let wsUri =protocol+ "chat.bewedoc.ru/myws";  
-const socket = io(wsUri);
+const socket = io();
 
   
 const message = document.querySelector('.message');
